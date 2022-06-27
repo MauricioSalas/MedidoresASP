@@ -7,17 +7,18 @@
                     <h3>Ver Medidores</h3>
                 </div>
                 <div class="card-body">
+                    <div class="form-group">
+                        <label for="tipoMedidorDropdown">Seleccionar Tipo de Medidor</label>
+                        <asp:DropDownList runat="server" ID="tipoMedidorDropdown" CssClass="form-control mt-2 mb-2" AutoPostBack="true" OnSelectedIndexChanged="tipoMedidorDropdown_SelectedIndexChanged">
+                            <asp:ListItem Value="1" Text="Inteligente"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Estado Sólido"></asp:ListItem>
+                            <asp:ListItem Value="3" Text="Vatios-Hora"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
                     <asp:GridView CssClass="table table-hover table-bordered" AutoGenerateColumns="false" runat="server" OnRowCommand="grillaMedidores_RowCommand" ID="grillaMedidores">
                         <Columns>
-                            <asp:BoundField DataField="" HeaderText=""/>
-                            <asp:BoundField DataField="" HeaderText=""/>
-                            <asp:BoundField DataField="" HeaderText=""/>
-                            <asp:BoundField DataField="" HeaderText=""/>
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:Button CommandName="" CommandArgument="" runat="server" CssClass="btn btn-danger" Text="Eliminar"/>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                            <asp:BoundField DataField="Codigo" HeaderText="Número de Serie Medidor"/>
+                            <asp:BoundField DataField="Tipo" HeaderText="Tipo de Medidor"/>
                         </Columns>
                     </asp:GridView>
                 </div>

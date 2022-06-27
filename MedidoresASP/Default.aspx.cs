@@ -27,11 +27,13 @@ namespace MedidoresASP
                 {
                     Medidor medidor = new Medidor()
                     {
-                        Codigo = codigoMedidor
+                        Codigo = codigoMedidor,
+                        Tipo = this.tipoMedidorDropdown.SelectedItem.Text
                     };
                     medidoresDAL.AgregarMedidores(medidor);
                     this.mensajesLabel.CssClass = "text-success";
-                    this.mensajesLabel.Text = "Medidor ingresado."+codigoMedidor;
+                    this.mensajesLabel.Text = "Medidor ingresado. Código: " + codigoMedidor;
+                    Response.Redirect("VerMedidores.aspx");
                 }
                 else
                 {

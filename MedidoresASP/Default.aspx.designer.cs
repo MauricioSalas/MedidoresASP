@@ -24,6 +24,15 @@ namespace MedidoresASP
         protected global::System.Web.UI.WebControls.TextBox codigoMedidor;
 
         /// <summary>
+        /// Control tipoMedidorDropdown.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList tipoMedidorDropdown;
+
+        /// <summary>
         /// Control validarCodigo.
         /// </summary>
         /// <remarks>
