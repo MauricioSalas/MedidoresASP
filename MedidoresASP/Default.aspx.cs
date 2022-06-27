@@ -28,7 +28,7 @@ namespace MedidoresASP
                     Medidor medidor = new Medidor()
                     {
                         Codigo = codigoMedidor,
-                        Tipo = this.tipoMedidorDropdown.SelectedItem.Text
+                        Tipo = this.tipoMedidorDropdown.SelectedItem.Text.Trim()
                     };
                     medidoresDAL.AgregarMedidores(medidor);
                     this.mensajesLabel.CssClass = "text-success";
