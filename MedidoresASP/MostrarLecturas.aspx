@@ -5,6 +5,7 @@
             <div class="card">
                 <div class="card-header bg-danger text-white">
                     <h3>Mostrar Lecturas</h3>
+                    <asp:Button runat="server" ID="recargarLecturas" Text="Recargar Página" OnClick="recargarLecturas_Click" CssClass="btn btn-success text-right mt-2 mb-2"/>
                 </div>
                 <div class="card-body">
                     <div class="form-group">

@@ -40,5 +40,10 @@ namespace MedidoresASP
         {
             cargarGrilla();
         }
+
+        protected void recargarLecturas_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MostrarLecturas.aspx");
+        }
     }
 }
